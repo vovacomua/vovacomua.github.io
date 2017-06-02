@@ -1,0 +1,21 @@
+body.fp-viewing-firstSlide .animated{
+    transform: rotate(0deg) ;
+    -webkit-transform: rotate(0deg) ;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.animated {
+    transform: rotate(122deg) ;
+    -webkit-transform: rotate(122deg) ;
+    opacity: 0;
+    -webkit-transition: all 1000ms ease;
+    transition: all 1000ms ease;
+}
+.animated.in {
+  transform: rotate(0deg) ;
+  -webkit-transform: rotate(0deg) ;
+  visibility: visible;
+  opacity: 1;
+}
