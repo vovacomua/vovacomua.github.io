@@ -3,10 +3,10 @@
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Flash Developer</title>
+	<title>PHP Laravel Developer</title>
 	<meta name="author" content="Vladimir Revenko" />
-	<meta name="description" content="Vladimir Revenko Flash/Flex/AIR Developer Portfolio CV Personal Website" />
-	<meta name="keywords"  content="Flash, Flex, AIR, mobile, freelance, job, development, game, stream" />
+	<meta name="description" content="Vladimir Revenko PHP Laravel deleloper Portfolio CV Personal Website" />
+	<meta name="keywords"  content="PHP, Laravel, job, development, freelance, CV, hire, website, portfolio, cv" />
 	<meta name="Resource-type" content="Document" />
 
 	<link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
@@ -95,25 +95,45 @@
 	}
 	
 	body.fp-viewing-firstPage.animated_title{
+		
+		-webkit-transform: translate3d(100px, 0px, 0px);
+		-moz-transform: translate3d(100px, 0px, 0px);
+		-ms-transform:translate3d(100px, 0px, 0px);
+		transform: translate3d(100px, 0px, 0px);
+		opacity: 0.2;
+	}
+
+	body.fp-viewing-firstPage.animated_subtitle{
         -webkit-transform: translate3d(100px, 0px, 0px);
 		-moz-transform: translate3d(100px, 0px, 0px);
 		-ms-transform:translate3d(100px, 0px, 0px);
 		transform: translate3d(0px, 0px, 0px);
 	}
+
+	body.fp-viewing-firstPage.animated_descr{
+        -webkit-transform: translate3d(60px, 0px, 0px);
+		-moz-transform: translate3d(60px, 0px, 0px);
+		-ms-transform:translate3d(60px, 0px, 0px);
+		transform: translate3d(0px, 0px, 0px);
+	}
 	
 	
 	.animated_img{
+		clip-path: circle(100px at center);
 		-webkit-transition: all 0.7s ease-out;
 		-moz-transition: all 0.7s ease-out;
 		-o-transition: all 0.7s ease-out;
 		transition: all 0.7s ease-out;
+		opacity: 0.2;
 	}
 	
     .animated_img.in{
+    	clip-path: circle(300px at center);
 		-webkit-transform: translate3d(100px, 0px, 0px);
 		-moz-transform: translate3d(100px, 0px, 0px);
 		-ms-transform:translate3d(100px, 0px, 0px);
 		transform: translate3d(50px, 0px, 0px);
+		opacity: 1;
 	}
         
 	.animated_title{
@@ -126,6 +146,7 @@
 		-moz-transform: translate3d(100px, 0px, 0px);
 		-ms-transform:translate3d(100px, 0px, 0px);
 		transform: translate3d(100px, 0px, 0px);
+		opacity: 0.2;
 	}
 	
 	.animated_title.in{
@@ -133,6 +154,49 @@
 		-moz-transform: translate3d(100px, 0px, 0px);
 		-ms-transform:translate3d(100px, 0px, 0px);
 		transform: translate3d(0px, 0px, 0px);
+		opacity: 1;
+	}
+
+	.animated_subtitle{
+		-webkit-transition: all 0.7s ease-out;
+		-moz-transition: all 0.7s ease-out;
+		-o-transition: all 0.7s ease-out;
+		transition: all 0.7s ease-out;
+		
+		-webkit-transform: translate3d(40px, 0px, 0px);
+		-moz-transform: translate3d(40px, 0px, 0px);
+		-ms-transform:translate3d(40px, 0px, 0px);
+		transform: translate3d(60px, 0px, 0px);
+	}
+	
+	.animated_subtitle.in{
+		-webkit-transform: translate3d(100px, 0px, 0px);
+		-moz-transform: translate3d(100px, 0px, 0px);
+		-ms-transform:translate3d(100px, 0px, 0px);
+		transform: translate3d(0px, 0px, 0px);
+	}
+
+	.animated_descr{
+		-webkit-transition: all 0.7s ease-out;
+		-moz-transition: all 0.7s ease-out;
+		-o-transition: all 0.7s ease-out;
+		transition: all 0.7s ease-out;
+		
+		-webkit-transform: translate3d(60px, 0px, 0px);
+		-moz-transform: translate3d(60px, 0px, 0px);
+		-ms-transform:translate3d(60px, 0px, 0px);
+		transform: translate3d(60px, 0px, 0px);
+		opacity: 0.2;
+
+	}
+	
+	.animated_descr.in{
+		-webkit-transform: translate3d(100px, 0px, 0px);
+		-moz-transform: translate3d(100px, 0px, 0px);
+		-ms-transform:translate3d(100px, 0px, 0px);
+		transform: translate3d(20px, 0px, 0px);
+		opacity: 1;
+		
 	}
 	
 	
@@ -157,8 +221,8 @@
 	<script type="text/javascript">
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
-				anchors: ['firstPage', 'reversi', '3rdPage', '4thPage', '5thPage', '6thPage'],
-				sectionsColor: ['#C63D0F', '#1BBC9B', '#7E8F7C', '#4BBFC3', '#7BAABE', '#C63D0F'],
+				anchors: ['firstPage', 'reversi', '3rdPage', '4thPage', '5thPage', '6thPage', '7th', '8th'],
+				sectionsColor: ['#C63D0F', '#1BBC9B', '#4BBFC3', '#7BAABE', '#C63D0F', '#7E8F7C', '#1BBC9B', '#7E8F7C'],
 				scrollBar: true,
 				
 				afterLoad: function(anchorLink, index){
@@ -172,6 +236,12 @@
                     $(this).find('.animated_title').each(function() {
                     $(this).addClass('in')
                     });
+                    $(this).find('.animated_subtitle').each(function() {
+                    $(this).addClass('in')
+                    });
+                    $(this).find('.animated_descr').each(function() {
+                    $(this).addClass('in')
+                    });
                     
                     
                     $('.section:not(".active")').find('.animated_img').each(function() {
@@ -180,29 +250,18 @@
                     $('.section:not(".active")').find('.animated_title').each(function() {
                       $(this).removeClass('in');
                     });
-                    
-					
-					//if (document.getElementById("animated_img_"+index) != undefined ) {
-						//console.log("go");
-						//$('#animated_title_'+index).addClass('animated_title_animate');
-						//$('#animated_img_'+index).addClass('animated_img_animate');
-					//}
-					//using index
-					//if(index == 4){
-						//alert("Section 4 ended loading");
-						//document.getElementById("box3").style.transition = "opacity 300ms ease-in-out 1s";
-					//	$('#animated_img_4, #animated_title_4').addClass('active');
-					//}
-
-					//using anchorLink
+                    $('.section:not(".active")').find('.animated_subtitle').each(function() {
+                      $(this).removeClass('in');
+                    });
+                    $('.section:not(".active")').find('.animated_descr').each(function() {
+                      $(this).removeClass('in');
+                    }); 
 					
 			},
 			    afterRender: function(){
 			    	console.log("afterRender");
 			    }
 			});
-		
-
         
     });
 	</script>
@@ -219,36 +278,85 @@
 				</div>
 				<div class="box">
 					<p class="animated_title" id="animated_title_1">Vladimir Revenko</p>
-					<h1>Flash Developer</h1>
+					<h1 class="animated_subtitle" class="animated_subtitle">PHP Laravel Developer</h1>
+					<div class="animated_descr">
 					<br>
-						Hello, thank you for visiting my site! <br>
-						Your sincere interest is the best driving force for my constant strive for perfection. 
-						I am a highly-qualified programmer. For more than 5 years I have been developing Flash applications on the professional basis. <br>
-						I always work in compliance with my clients’ demands, and that’s why learning of new practices, 
-						methods and approaches in programming is an inevitable part of my creative process. 
-						Challenge and Flexibility are my key features. <br>
+						Analytical, big picture thinker & fast learning developer with about 1 year of PHP experience. <br> <br>
+						Having 5+ of overall programming XP let me be proficient in software development principles and in this, value effective communication and collaboration even more. <br>
+						Completed 10+ projects of scales from small to large working individually or as a part of a team. <br> <br>
+						I can explain things properly and enjoy dealing with various people. <br>
+					<br>
+						<a href="https://docs.google.com/document/d/19Sk6ycr5nlQwqRnurxd0V6ZNcCM8GnQFv8JvOo6bLtU/edit?usp=sharing">You can view my CV here. </a> 
 
-					<a href="https://www.freelancer.com/u/vovacomua.html">Read my testimonials and contact me! </a> Let’s create together!
+					</div>
 					
-					<span class="tech"><a href="https://docs.google.com/document/d/1dRSQw4Sgv4_ssU4ofizjr6qKuHIM96Dxt03fAEHfNfU/edit?usp=sharing">You can view my CV here.</a></span>
+				</div>
+		</div>		
+	</div>
+
+	<div class="section " id="section1">
+		<div class="wrap">
+				<div class="boxPic">
+					<img class="animated_img" id="animated_img_1" src="imgs/super.png">
+				</div>
+				<div class="box">
+					<p class="animated_title" id="animated_title_2">SuperTicket</p>
+					<h1 class="animated_subtitle">Web portal for selling tickets online</h1>
+					<div class="animated_descr">
+						<br> Helping finish the project and turn it’s code base into highly customizable e-commerce solution.
+
+						<br>
+						<br>&bull;Work as a member of the team collaborating with other backend developers, front-end developers, designers, QAs and a client.
+						<br>&bull;Expand and fix base functionality of the completed modules.
+						<br>&bull;Participate in the development and implementation of new features and functionality.
+						<br>&bull;Tweak UI.
+						<br>&bull;Document code.
+						
+					</div>
+					<span class="tech">PHP, JavaScript, AJAX, HTML, CSS, SQL, Laravel, Git</span>
+				</div>
+		</div>		
+	</div>
+
+	<div class="section " id="section1">
+		<div class="wrap">
+				<div class="boxPic">
+					<img class="animated_img" id="animated_img_2" src="imgs/crud.png">
+				</div>
+				<div class="box">
+					<p class="animated_title" id="animated_title_2">Employees Manager</p>
+					<h1 class="animated_subtitle">Laravel-based demo application with open source code</h1>
+					<div class="animated_descr">
+						<br>&bull;Nested set data structure for employees model
+						<br>&bull;Authentication
+						<br>&bull;CRUD functionality
+						<br>&bull;Order and search using AJAX
+						<br>&bull;Employees representation as interactive tree incl. lazy loading sub-levels and ability to rebase entries using drag-and-drop
+						<br>&bull;Image prosessing
+						<br>&bull;ORM events
+						<br>Source code <a href="https://github.com/vovacomua/employee-manager-5.7">available on GitHub</a> 
+					</div>
+					<span class="tech">PHP, JavaScript, AJAX, HTML, CSS, SQL, Laravel, Git</span>
 				</div>
 		</div>		
 	</div>
 	
-	<div class="section " id="section1">
+	<div class="section " id="section3">
 		<div class="wrap">
 				<div class="boxPic">
-					<img class="animated_img" id="animated_img_2" src="imgs/img01.png">
+					<img class="animated_img" id="animated_img_3" src="imgs/img01.png">
 				</div>
 				<div class="box">
-					<p class="animated_title" id="animated_title_2">REVERSI</p>
-					<h1>Table game</h1>
+					<p class="animated_title" id="animated_title_3">REVERSI</p>
+					<h1 class="animated_subtitle">Table game</h1>
+					<div class="animated_descr">
 					<br>
 						Classic table game of Reversi. 
 						<br>Play against AI. 
 						<br>Created with respect to OOP paradigm. 
 						<br>Source code <a href="https://github.com/vovacomua/reversi-starling">available on GitHub</a> 
 						<br>See it in action <a href="https://vovacomua.github.io/files/reversi/ReversiStarling.html">here</a>
+					</div>
 					<span class="tech">AS3, Starling, OOP, Flash Builder</span>
 				</div>
 		</div>		
@@ -261,7 +369,8 @@
 				</div>
 				<div class="box">
 					<p class="animated_title" id="animated_title_5">YaRec!</p>
-					<h1>Video Recorder</h1>
+					<h1 class="animated_subtitle">Video Recorder</h1>
+					<div class="animated_descr">
 					<br>
 						Application for audio/video recording.
 						<br>Allows to select audio-only or AV recording option.
@@ -269,6 +378,7 @@
 						Animated tooltips add visual appeal.
 						<br>Can work with AMS and Red5 media servers.
 						<br>See demo version <a href="https://vovacomua.github.io/files/recorder/recorder-new.htm">here</a>
+					</div>
 					<span class="tech">AS3, FMS, PHP, MySQL, HTML, JavaScrip</span>
 				</div>
 		</div>		
@@ -281,11 +391,13 @@
 				</div>
 				<div class="box">
 					<p class="animated_title" id="animated_title_6">VIDEORULETKA</p>
-					<h1>Clone of classic chat roulette application</h1>
+					<h1 class="animated_subtitle">Clone of classic chat roulette application</h1>
+					<div class="animated_descr">
 					<br>
 						Reproduced 100% of original application's functionality, added some more features.
 						<br>Payment gateway integration. Fully responsive design. Powered by Adobe Media server.
 						<br>See demo version <a href="https://vovacomua.github.io/files/crc/crc.html">here</a>
+					</div>
 					<span class="tech">AS3, MXML, FMS, PHP, MySQL, HTML, JavaScrip</span>
 				</div>
 		</div>		
@@ -298,7 +410,7 @@
 				</div>
 				<div class="box">
 					<p class="animated_title" id="animated_title_7">VALOV TV</p>
-					<h1>Website of producer</h1>
+					<h1 class="animated_subtitle">Website of producer</h1>
 					<br>
 						Developed video player and video-on-demand service for the website.
 						<br>Integrated Flash application into Laravel based website working closely with backend developers. 
@@ -307,17 +419,7 @@
 				</div>
 		</div>		
 	</div>
-	
-	<div class="section" id="section11">
-	    <div class="slide" id="slide1">
-			<div class="box">
-				  More works are
-				<p>
-					COMING SOON
-				</p>
-			</div>
-		</div>
-	</div>
+
 	
 </div>
 
